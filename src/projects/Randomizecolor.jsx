@@ -12,6 +12,7 @@ export default function Randomizecolor() {
     let randomColor = getRandomColor();
     let body = document.querySelector("body");
     body.style.background = randomColor;
+    event.target.style.backgroundColor = getRandomColor();
   }
   return (
     <div className="container text-center">
