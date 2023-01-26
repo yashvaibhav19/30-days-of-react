@@ -11,3 +11,34 @@ body {
     font-size: 2.5rem;
     font-weight: 400;
 }
+
+/* Button Effect */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: auto;
+    border-top: 1px solid grey;
+    margin-top: 3%;
+  }
+.button {
+    display: inline-block;
+    background: magenta;
+    color: white;
+    padding: 1%;
+    margin: 5% 1%;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: 1px solid magenta;
+    transition: all .3s linear 0s; 
+}
+  
+  /*Button 1 - Background Change */
+.btn-1:hover {
+      background: purple;
+      color: white;
+      border: 1px solid purple;
+}
