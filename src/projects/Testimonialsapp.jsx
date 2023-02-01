@@ -6,7 +6,7 @@ import { FaUserAlt } from "react-icons/fa"
 import { BiCommentDetail } from "react-icons/bi"
 
 export default function Testimonialsapp() {
-  const [testimonials,setTestimonials] = useState();
+  const [testimonials,setTestimonials] = useState("");
   const [items,setItems] = useState();
   useEffect(()=>{
     fetch(`https://jsonplaceholder.typicode.com/${testimonials}`)
@@ -29,6 +29,21 @@ export default function Testimonialsapp() {
             onClick={()=> setTestimonials("Comments")}
         />
         <Title text={!testimonials ? "select from above" : testimonials}/>
+        {!items 
+          ? null :
+            items.map((item)=>{
+              return (
+                <div key={item.id}>
+                  {item.name && <h2>{item.name}</h2>}
+                  <div>
+                    <h4>{item.title}</h4>
+                    <p>{item.body}</p>
+                  </div>
+                  {item.email && <h2>{item.email}</h2>}
+                </div>
+              )
+            })
+        };
     </div>
   )
 }
